@@ -1,0 +1,324 @@
+{
+  "name": "Liam Vargas",
+  "label": "BI Analyst",
+  "image_path": "portfolio_media/profile-pic.jpg",
+  "contact": {
+    "email": "huongta1212@gmail.com",
+    "phone": "",
+    "location": "Paris, France"
+  },
+  "summary": "Hi there, this is my personal webpage here you see more things that do not fit in my CV. I have 5 years of experience as an Quality Assurance Software Engineer. I've worked for both private and public sectors.",
+  "base_url": "127.0.0.1:5500",
+  "social_links": [
+    {
+      "label": "My Linkedin Profile",
+      "url": "www.linkedin.com/in/leacember",
+      "svg_path": "img/linkedin.svg"
+    },
+    {
+      "label": "My Github Account",
+      "url": "https://github.com/Hane1212",
+      "svg_path": "img/github.svg"
+    }
+  ],
+  "work_experience": [
+    {
+      "company": "Verificación Responsable",
+      "sector": "Public, Environmental Protection (SEMADET). Mexico",
+      "position": "Department Chief | BI Analyst",
+      "url": "https://verificacionresponsable.jalisco.gob.mx/",
+      "start_date": "01/06/2020",
+      "end_date": "15/08/2024",
+      "summary": "As Department Chief, led technical staff in vehicle and equipment testing, process improvement, and data analysis for the vehicle inspection program.",
+      "highlights": [
+        "Led data analysis on various operational phenomena within the vehicle inspection program, from operational performance to identification of exploided system vulnerabilities.",
+        "Performed internal audits of operational data to ensure compliance with state and federal vehicle inspection standards across data sources such as ODS and APIs.",
+        "Spearheaded a data-driven culture across the organization to support and enhance business processes and decisions.",
+        "Wrote SQL and Python scripts to automate data processing, quality checks, report generation, and data distribution."
+      ]
+    },
+    {
+      "company": "Vectro Rastreo Vehicular",
+      "sector": "Private, B2B and B2C. Mexico",
+      "position": "Project Engineer",
+      "url": "https://vectro.com.mx/#content",
+      "start_date": "01/01/2010",
+      "end_date": "01/05/2020",
+      "summary": "Configured and tested GPS, RFID, Sigfox, and MDVR devices for different type of transportation vehicles and industries.",
+      "highlights": [
+        "Configured and tested GPS tracking devices for passenger  vehicles, semi-trucks and stock trucks.",
+        "Tested different technologies like RFID, MDVR, and Sigfox for later integration in the portfolio.",
+        "Built small prototypes with Arduino Uno and ESP32 for sensors and actuators integration with GPS devices."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "BI Framework",
+      "organization": "SEMADET",
+      "summary": "Took initiative to safeguard, document, and enhance data assets across the organization to enhance business processes and to mitigate bad data practices. All of this with the support of the IT Department Chief and the Operations Department.",
+      "url": "https://sample.com",
+      "highlights": [
+        "Conducted gap analysis across data sources to assess feasibility and viability to implement the BI framework.",
+        "Drafted project documentation such as scope, objectives, benefits, actions to be taken, budget, risks, and success criteria.",
+        "Integrated 2 Software Jr. Engineers to increase IT's team size.",
+        "Defined BI Technical Architecture alongside the IT Department Chief.",
+        "Deployed and configured Airflow and Airbyte on a single Ubuntu server to orchestrate ETL/EL pipelines, integrating AWS and GCP services."
+      ]
+    },
+    {
+      "title": "Comparative Analysis: Federal Standard Vs Japanese Automobile Manufacturer",
+      "organization": "SEMADET",
+      "summary": "Led analysis comparing federal diesel inspection standards with a Japanese manufacturer's alternative to uphold regulatory integrity.",
+      "url": "https://sample.com",
+      "highlights": [
+        "Defined scope, methodology for vehicle testing, quality assurance controls, and structure of the final report",
+        "Defined alongside a multi-disciplinary engineering team the data processing steps to deliver key insights",
+        "Leveraging descriptive statistics, graph we demonstrated a favorable and biased outcome for the manufacturer if applied its proposed method.",
+        "Set a precedent for continuous monitoring to enforce the compliance of the NOM-045-SEMARNAT-2017"
+      ]
+    }
+  ],
+  "school_project": [
+    {
+      "project_name": "Data Science and Data Engineering projects",
+      "school": "EPITA",
+      "summary": "These some of the projects that I've worked on during my MSc.",
+      "highlights": [
+        "ULMFiT network for job offer classification. Wrote script to extract french job offers from France Travail, working on the NLP side to implement ULMFiT for job offer classification with scarce labels.",
+        "With the help of Pandas, Numpy, Sklearn and Seaborn  preprocessed, modeled, trained, tested, validated, predicted house prices with a linear regression model, finally industrialized the code.",
+        "Social Network Clustering: Airflow deployment in docker containers, wrote data ingestion and prediction dags, and automated data quality checks with Great Expectations Core.",
+        "Conducted data analysis on Mexico's air quality data from monitoring stations to show how particulate matter concentration changes each season, enriched dataset with Mexican government's data of monthly precipitation figures."
+      ]
+    },
+    {
+      "project_name": "Rubber-Tracked Solar Panel Cleaning Robot",
+      "school": "CETI Colomos",
+      "summary": "Designed and built prototype of solar panel cleaning rubber track robot with IR edge detection",
+      "highlights": [
+          "As a team of two, we developed a prototype of a rubber-track robot for cleaning solar panels.",
+          "Conducted market research and defined technical specifications with guidance from a faculty advisor, keeping costs low.",
+          "Designed the chassis and electromechanical components in SolidWorks; fabricated key parts using school machinery.",
+          "Integrated sensors, microcontroller (CIKU PIC18F4550), DC motors, batteries, and additional electronics.",
+          "Despite halting the project due to COVID and scope creep, I gained hands-on experience in design, prototyping, and project management.",
+          "This project played a key role in securing job interviews and my last two professional experiences."
+      ]
+
+    }
+  ],
+  "education": [
+    {
+      "institution": "EPITA",
+      "location": "Paris, France",
+      "start_end_dates": "September 2024 - March 2026",
+      "url": "https://www.epita.fr/en/msc-computer-science-program-overview/",
+      "degrees": [
+        "Master of Science in Computer Science"
+      ],
+      "specialization": "Data Science and Analytics"
+    },
+    {
+      "institution": "CETI Colomos",
+      "location": "Guadalajara, Mexico",
+      "start_end_dates": "August 2015 - July 2020",
+      "url": "https://direccionacademica.ceti.mx/subdir_docencia/oferta_ingenieria.php#nav-mecatronica",
+      "degrees": [
+        "Bachelor of Engineering in Mechatronics"
+      ],
+      "specialization": "Productivity"
+    },
+    {
+      "institution": "CETI Colomos",
+      "location": "Guadalajara, Mexico",
+      "start_end_dates": "August 2011 - July 2015",
+      "url": "https://direccionacademica.ceti.mx/subdir_docencia/oferta_ingenieria.php#nav-mecatronica",
+      "degrees": [
+        "Technologist in Automotive Mechanics"
+      ],
+      "specialization": "Fuel Injection"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Python",
+      "proficiency": "",
+      "proficiency_label": "Productive"
+    },
+    {
+      "name": "Java",
+      "proficiency": "",
+      "proficiency_label": "Basic"
+    },
+    {
+      "name": "C++",
+      "proficiency": "",
+      "proficiency_label": "Basic"
+    },
+    {
+      "name": "SQL",
+      "proficiency": "",
+      "proficiency_label": "Productive"
+    },
+    {
+      "name": "Apache Airflow",
+      "proficiency": "",
+      "proficiency_label": "Productive"
+    },
+    {
+      "name": "Airbyte",
+      "proficiency": "",
+      "proficiency_label": "Productive"
+    },
+    {
+      "name": "Power BI and Looker Studio",
+      "proficiency": "",
+      "proficiency_label": "Productive"
+    },
+    {
+      "name": "AWS (S3, Lambda, ECS)",
+      "proficiency": "",
+      "proficiency_label": "Productive"
+    },
+    {
+      "name": "GCP (Service Accounts for Google APIs integration)",
+      "proficiency": "",
+      "proficiency_label": "Basic"
+    },
+    {
+      "name": "Docker",
+      "proficiency": "",
+      "proficiency_label": "Productive"
+    },
+    {
+      "name": "Git",
+      "proficiency": "",
+      "proficiency_label": "Basic"
+    },
+    {
+      "name": "Unix-based environments",
+      "proficiency": "",
+      "proficiency_label": "Productive"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Traveling",
+      "summary": ""
+    },
+    {
+      "name": "Aquariums",
+      "summary": ""
+    },
+    {
+      "name": "Cars",
+      "summary": ""
+    },
+    {
+      "name": "Technology",
+      "summary": ""
+    },
+    {
+      "name": "Videogames",
+      "summary": ""
+    },
+    {
+      "name": "Working Out",
+      "summary": ""
+    }
+
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Advanced"
+    },
+    {
+      "language": "French",
+      "fluency": "Intermediate"
+    }
+  ],
+  "learning_recommendations": [
+    {
+      "name": "Books",
+      "relation": "This is a non-exhaustive list of books that I recommend to have solid bases as a data professional",
+      "images": [
+        {
+          "img_path": "https://media.springernature.com/w158/springer-static/cover-hires/book/978-3-662-56509-4?as=webp",
+          "caption": "",
+          "img_link": "https://link.springer.com/book/10.1007/978-3-662-56509-4"
+        },
+        {
+          "img_path": "https://media.springernature.com/w158/springer-static/cover-hires/book/978-3-319-55444-0?as=webp",
+          "caption": "",
+          "img_link": "https://link.springer.com/book/10.1007/978-3-319-55444-0"
+        },
+        {
+          "img_path": "https://m.media-amazon.com/images/I/619HQGYB4yL._SY342_.jpg",
+          "caption": "",
+          "img_link": "https://www.amazon.fr/Business-Intelligence-Guidebook-Integration-Analytics-ebook/dp/B00PLOC3R8"
+        },
+        {
+          "img_path": "https://m.media-amazon.com/images/I/81xP-X+DbHL._SL1360_.jpg",
+          "caption": "",
+          "img_link": "https://www.amazon.com/Learning-Python-professional-versatile-programming/dp/1783551712"
+        },
+        {
+          "img_path": "https://m.media-amazon.com/images/I/919N5M6kIeL._SY342_.jpg",
+          "caption": "",
+          "img_link": "https://www.amazon.com/SQL-Cookbook-Solutions-Techniques-Developers/dp/0596009763"
+        },
+        {
+          "img_path": "https://m.media-amazon.com/images/I/71EN1l+uQKL._SL1500_.jpg",
+          "caption": "",
+          "img_link": "https://www.amazon.com/Storytelling-Data-Visualization-Business-Professionals/dp/1119002257?pd_rd_w=GOBtn&content-id=amzn1.sym.7f0cf323-50c6-49e3-b3f9-63546bb79c92&pf_rd_p=7f0cf323-50c6-49e3-b3f9-63546bb79c92&pf_rd_r=PRDGPBNW9STWB7TQTHQW&pd_rd_wg=v8uFy&pd_rd_r=024055bd-f103-4273-9e7f-100ca4cb5886&pd_rd_i=1119002257&psc=1&linkCode=sl1&tag=swdbooks-20&linkId=309f73640a0cb64e3b676e26561d07a0&language=en_US&ref_=as_li_ss_tl"
+        }
+      ]
+    },
+    {
+      "name": "Youtube Channels",
+      "relation": "These are the youtube channels that I frequently watch to learn something new.",
+      "thumbnails": [
+        {
+          "img_path": "https://yt3.googleusercontent.com/WH6jMV6z1qAQsfEJM7KTvSpTAgzUlSZNtui8utjKqjR6UgvN2vDi4czfuqk5VPUlbuO58eZu=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+          "caption": "Corey Schafer",
+          "yt_link": "https://www.youtube.com/@coreyms",
+          "description": "Very helpful videos about Python and software in general."
+        },
+        {
+          "img_path": "https://yt3.googleusercontent.com/p6z70ufLVjxQBXW-MUDUyTm47rfAlYRh3-fQ9kfpECT4CJ5OSQA7DJomSNMZ7IbtVUHIhSwa=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+          "caption": "3Blue1Brown",
+          "yt_link": "https://www.youtube.com/@3blue1brown",
+          "description": "Must watch to understand concepts of statistics, probability, and other Math domains."
+        },
+        {
+          "img_path": "https://yt3.googleusercontent.com/EfKBEBfOPHn91leF2LvUsu6gj11JAgPvW1q3oIPD3WZ8AfWXxodh7IjQ28g8BY0WCYnbOpLpKQ=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+          "caption": "StatQuest with Josh Starmer",
+          "yt_link": "https://www.youtube.com/@statquest",
+          "description": "Must watch when thinking of implementing ML concepts to practice."
+        },
+        {
+          "img_path": "https://yt3.googleusercontent.com/nkd37nuOtlS4elfvUq0CoVzCRferIjQJECzz5LedRJrjwwJ7JJ9nj6mg52iqarYPToEokbfh9Q=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+          "caption": "NullSafeArchitect",
+          "yt_link": "https://www.youtube.com/@NullSafeArchitect",
+          "description": "Very good tutorials about enterprise software, digital transformation, etc."
+        },
+        {
+          "img_path": "https://yt3.googleusercontent.com/INGUd58oLxKnTcbY6YUGY9LQi7i7E_3a9nv7m-2VNn259P16RyOHiUlKXAYxFvrxoGF4OilltQ=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+          "caption": "hdeleon.net",
+          "yt_link": "https://www.youtube.com/@hdeleonnet",
+          "description": "Good to know about other software topics, tutorials, practices, podcasts, etc."
+        },
+        {
+          "img_path": "https://yt3.googleusercontent.com/DDcF6CANqnV9DahMWIuKCfHaULqvtB49F7yXL1g7UudLzh7lOVYKQ8kJVYU_AMLynwO7ujDzOw=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+          "caption": "Data with Marc",
+          "yt_link": "https://www.youtube.com/@MarcLamberti",
+          "description": "Good to know more about Airfow and its latest realeses."
+        }
+      ]
+    }
+  ]
+}
