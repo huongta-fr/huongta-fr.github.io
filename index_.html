@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Info -->
+    <title>Huong TA - Portfolio</title>
+    <meta name="description" content="Huong TA - Hi there, this is my personal webpage here you see more things that do not fit in my CV. I have 5 years of experience as an Engineer working with vehicles, IoT and Data. I&#39;ve worked for both private and public sectors.">
+    <meta name="author" content="Huong TA">
+
+    <!-- Open Graph Tags: The title of the page for social media sharing. It can match the title tag or be more descriptive. -->
+    <meta property="og:title" content="Huong TA">
+
+    <!-- Open Graph Tags: Typically set to "website" for static sites or "article" for content-heavy pages. -->
+    <meta property="og:type" content="website">
+
+    <!-- Open Graph Tags: The URL of the page, used to ensure link previews resolve to the correct page. -->
+    <meta property="og:url" content="127.0.0.1:5500/index.html">
+
+    <!-- Open Graph Tags: URL of an image that represents the page. Useful for link previews. -->
+    <meta property="og:image" content="127.0.0.1:5500/portfolio_media/profile-pic.jpg">
+
+    <!-- Open Graph Tags: Provides an alternative text for the image to improve accessibility. -->
+    <meta property="og:image:alt" content="Huong TA Profile Image">
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Custom Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+          rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/modern_normalize.css" />
+    <link rel="stylesheet" href="css/html5bp.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Set a theme color that matches your website's primary color -->
+    <meta name="theme-color" content="#fafafa">
+
+    <!-- Favicon for all browsers -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+
+    <!-- Apple touch icon for iOS devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon.png">
+
+    <!-- Web app manifest for Progressive Web Apps -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Content Security Policy: Uncomment to enhance security by restricting where content can be loaded from (useful for preventing certain attacks like XSS). Update if adding external sources (e.g., Google Fonts, Bootstrap CDN, analytics, etc). -->
+    <!-- <meta http-equiv="Content-Security-Policy" content=" default-src 'self'; script-src 'self' code.jquery.com; style-src 'self' fonts.googleapis.com; font-src fonts.gstatic.com; img-src 'self' images.examplecdn.com; "> -->
+  </head>
+
+  <body>
+    <header class="page-header">
+      <div class="container">
+        <div class="header-top flex-responsive">
+          
+            <img class="header-image"
+                 width="256"
+                 height="256"
+                 src="portfolio_media/profile-pic.jpg"
+                 alt="Huong TA Profile Image" />
+          
+          <div class="header-info">
+            <h1>Huong TA</h1>
+            <h2 class="header-label">Data Scientist | Data Analyst</h2>
+            
+              <address>
+                <ul class="inline-list flex-responsive">
+                  
+                    <li>
+                      <a href="mailto:huongta.coltech@gmail.com">huongta.coltech@gmail.com</a>
+                    </li>
+                  
+                  
+                  <li>Paris, France</li>
+                </ul>
+              </address>
+            
+            
+              <ul class="inline-list flex-responsive">
+                
+                  <li>
+                    <a href="https://www.linkedin.com/in/leacember/"
+                       rel="noopener noreferrer"
+                       aria-label="My Linkedin Profile"
+                       class="link-with-icon"
+                       target="_blank">
+                      <svg aria-hidden="true"
+     xmlns="http://www.w3.org/2000/svg"
+     role="img"
+     width="16"
+     height="16"
+     fill="currentColor"
+     class="bi bi-linkedin"
+     viewBox="0 0 16 16">
+  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+</svg>
+
+                      My Linkedin Profile
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://github.com/huongta-fr"
+                       rel="noopener noreferrer"
+                       aria-label="My Github Account"
+                       class="link-with-icon"
+                       target="_blank">
+                      <svg aria-hidden="true"
+     xmlns="http://www.w3.org/2000/svg"
+     role="img"
+     width="16"
+     height="16"
+     fill="currentColor"
+     class="bi bi-github"
+     viewBox="0 0 16 16">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+</svg>
+
+                      My Github Account
+                    </a>
+                  </li>
+                
+              </ul>
+            
+            <p class="header-summary">Hi there, this is my personal webpage here you see more things that do not fit in my CV. I have 5 years of experience as an Engineer working with vehicles, IoT and Data. I&#39;ve worked for both private and public sectors.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-content">
+      <div class="container">
+        <main>
+          
+            <section>
+              <h2 class="section-heading">Work Experience</h2>
+              
+                <section>
+                  <h3>
+                    
+                      Department Chief | BI Analyst at <a href="https://verificacionresponsable.jalisco.gob.mx/" target="_blank">Verificación Responsable</a>
+                    
+                  </h3>
+                  
+                    <p class = "section-label">Sector: Public, Environmental Protection (SEMADET). Mexico</p>
+                  
+                  
+                    <p class="section-label">01/06/2020 - 15/08/2024</p>
+                  
+                  <p>As Department Chief, led technical staff in vehicle and equipment testing, process improvement, and data analysis for the vehicle inspection program.</p>
+                  
+                    <ul>
+                      <li>Led data analysis on various operational phenomena within the vehicle inspection program, from operational performance to identification of exploided system vulnerabilities.</li><li>Performed internal audits of operational data to ensure compliance with state and federal vehicle inspection standards across data sources such as ODS and APIs.</li><li>Spearheaded a data-driven culture across the organization to support and enhance business processes and decisions.</li><li>Wrote SQL and Python scripts to automate data processing, quality checks, report generation, and data distribution.</li>
+                    </ul>
+                  
+                </section>
+              
+                <section>
+                  <h3>
+                    
+                      Project Engineer at <a href="https://vectro.com.mx/#content" target="_blank">Vectro Rastreo Vehicular</a>
+                    
+                  </h3>
+                  
+                    <p class = "section-label">Sector: Private, B2B and B2C. Mexico</p>
+                  
+                  
+                    <p class="section-label">01/01/2010 - 01/05/2020</p>
+                  
+                  <p>Configured and tested GPS, RFID, Sigfox, and MDVR devices for different type of transportation vehicles and industries.</p>
+                  
+                    <ul>
+                      <li>Configured and tested GPS tracking devices for passenger  vehicles, semi-trucks and stock trucks.</li><li>Tested different technologies like RFID, MDVR, and Sigfox for later integration in the portfolio.</li><li>Built small prototypes with Arduino Uno and ESP32 for sensors and actuators integration with GPS devices.</li>
+                    </ul>
+                  
+                </section>
+              
+            </section>
+          
+
+          
+            <section>
+              <h2 class="section-heading">Projects</h2>
+              
+                <section>
+                  <h3>
+                    
+                      BI Framework
+                    
+                  </h3>
+                  
+                    <p class = "section-label">Organization: SEMADET</p>
+                  
+                  <p>Took initiative to safeguard, document, and enhance data assets across the organization to enhance business processes and to mitigate bad data practices. All of this with the support of the IT Department Chief and the Operations Department.</p>
+                  
+                    <ul>
+                      <li>Conducted gap analysis across data sources to assess feasibility and viability to implement the BI framework.</li><li>Drafted project documentation such as scope, objectives, benefits, actions to be taken, budget, risks, and success criteria.</li><li>Integrated 2 Software Jr. Engineers to increase IT&#39;s team size.</li><li>Defined BI Technical Architecture alongside the IT Department Chief.</li><li>Deployed and configured Airflow and Airbyte on a single Ubuntu server to orchestrate ETL/EL pipelines, integrating AWS and GCP services.</li>
+                    </ul>
+                  
+                  
+                </section>
+              
+                <section>
+                  <h3>
+                    
+                      Comparative Analysis: Federal Standard Vs Japanese Automobile Manufacturer
+                    
+                  </h3>
+                  
+                    <p class = "section-label">Organization: SEMADET</p>
+                  
+                  <p>Led analysis comparing federal diesel inspection standards with a Japanese manufacturer&#39;s alternative to uphold regulatory integrity.</p>
+                  
+                    <ul>
+                      <li>Defined scope, methodology for vehicle testing, quality assurance controls, and structure of the final report</li><li>Defined alongside a multi-disciplinary engineering team the data processing steps to deliver key insights</li><li>Leveraging descriptive statistics, graph we demonstrated a favorable and biased outcome for the manufacturer if applied its proposed method.</li><li>Set a precedent for continuous monitoring to enforce the compliance of the NOM-045-SEMARNAT-2017</li>
+                    </ul>
+                  
+                  
+                </section>
+              
+            </section>
+          
+            <section>
+              <h2 class="section-heading">School Projects</h2>
+              
+                <section>
+                  <h3>
+                    Data Science and Data Engineering projects
+                  </h3>
+                  
+                  <p class="section-label">School: EPITA</p>
+                  
+                  
+                  <p>These some of the projects that I&#39;ve worked on during my MSc.</p>
+                  
+                    <ul>
+                      <li>ULMFiT network for job offer classification. Wrote script to extract french job offers from France Travail, working on the NLP side to implement ULMFiT for job offer classification with scarce labels.</li><li>With the help of Pandas, Numpy, Sklearn and Seaborn  preprocessed, modeled, trained, tested, validated, predicted house prices with a linear regression model, finally industrialized the code.</li><li>Social Network Clustering: Airflow deployment in docker containers, wrote data ingestion and prediction dags, and automated data quality checks with Great Expectations Core.</li><li>Conducted data analysis on Mexico&#39;s air quality data from monitoring stations to show how particulate matter concentration changes each season, enriched dataset with Mexican government&#39;s data of monthly precipitation figures.</li>
+                    </ul>
+                  
+                  
+                </section>
+              
+                <section>
+                  <h3>
+                    Rubber-Tracked Solar Panel Cleaning Robot
+                  </h3>
+                  
+                  <p class="section-label">School: CETI Colomos</p>
+                  
+                  
+                  <p>Designed and built prototype of solar panel cleaning rubber track robot with IR edge detection</p>
+                  
+                    <ul>
+                      <li>As a team of two, we developed a prototype of a rubber-track robot for cleaning solar panels.</li><li>Conducted market research and defined technical specifications with guidance from a faculty advisor, keeping costs low.</li><li>Designed the chassis and electromechanical components in SolidWorks; fabricated key parts using school machinery.</li><li>Integrated sensors, microcontroller (CIKU PIC18F4550), DC motors, batteries, and additional electronics.</li><li>Despite halting the project due to COVID and scope creep, I gained hands-on experience in design, prototyping, and project management.</li><li>This project played a key role in securing job interviews and my last two professional experiences.</li>
+                    </ul>
+                  
+                  
+                </section>
+              
+            </section>
+          
+
+          
+
+          
+            <section>
+              <h2 class="section-heading">Learning Recommendations</h2>
+              
+                <section>
+                  <h3>Books</h3>
+                  <p class="section-label">This is a non-exhaustive list of books that I recommend to have solid bases as a data professional</p>
+                  
+                  
+                    <div class="gallery main-gallery">
+                      
+                        <figure>
+                          <a href="https://link.springer.com/book/10.1007/978-3-662-56509-4" target="_blank">
+                            <img width="127.50"
+                                height="63.75"
+                                src="https://media.springernature.com/w158/springer-static/cover-hires/book/978-3-662-56509-4?as=webp"
+                                alt="">
+                          </a>
+                          <figcaption></figcaption>
+                        </figure>
+                      
+                        <figure>
+                          <a href="https://link.springer.com/book/10.1007/978-3-319-55444-0" target="_blank">
+                            <img width="127.50"
+                                height="63.75"
+                                src="https://media.springernature.com/w158/springer-static/cover-hires/book/978-3-319-55444-0?as=webp"
+                                alt="">
+                          </a>
+                          <figcaption></figcaption>
+                        </figure>
+                      
+                        <figure>
+                          <a href="https://www.amazon.fr/Business-Intelligence-Guidebook-Integration-Analytics-ebook/dp/B00PLOC3R8" target="_blank">
+                            <img width="127.50"
+                                height="63.75"
+                                src="https://m.media-amazon.com/images/I/619HQGYB4yL._SY342_.jpg"
+                                alt="">
+                          </a>
+                          <figcaption></figcaption>
+                        </figure>
+                      
+                        <figure>
+                          <a href="https://www.amazon.com/Learning-Python-professional-versatile-programming/dp/1783551712" target="_blank">
+                            <img width="127.50"
+                                height="63.75"
+                                src="https://m.media-amazon.com/images/I/81xP-X+DbHL._SL1360_.jpg"
+                                alt="">
+                          </a>
+                          <figcaption></figcaption>
+                        </figure>
+                      
+                        <figure>
+                          <a href="https://www.amazon.com/SQL-Cookbook-Solutions-Techniques-Developers/dp/0596009763" target="_blank">
+                            <img width="127.50"
+                                height="63.75"
+                                src="https://m.media-amazon.com/images/I/919N5M6kIeL._SY342_.jpg"
+                                alt="">
+                          </a>
+                          <figcaption></figcaption>
+                        </figure>
+                      
+                        <figure>
+                          <a href="https://www.amazon.com/Storytelling-Data-Visualization-Business-Professionals/dp/1119002257?pd_rd_w=GOBtn&amp;content-id=amzn1.sym.7f0cf323-50c6-49e3-b3f9-63546bb79c92&amp;pf_rd_p=7f0cf323-50c6-49e3-b3f9-63546bb79c92&amp;pf_rd_r=PRDGPBNW9STWB7TQTHQW&amp;pd_rd_wg=v8uFy&amp;pd_rd_r=024055bd-f103-4273-9e7f-100ca4cb5886&amp;pd_rd_i=1119002257&amp;psc=1&amp;linkCode=sl1&amp;tag=swdbooks-20&amp;linkId=309f73640a0cb64e3b676e26561d07a0&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank">
+                            <img width="127.50"
+                                height="63.75"
+                                src="https://m.media-amazon.com/images/I/71EN1l+uQKL._SL1500_.jpg"
+                                alt="">
+                          </a>
+                          <figcaption></figcaption>
+                        </figure>
+                      
+                    </div>
+                  
+                  
+                </section>
+              
+                <section>
+                  <h3>Youtube Channels</h3>
+                  <p class="section-label">These are the youtube channels that I frequently watch to learn something new.</p>
+                  
+                  
+                  
+                    <div class="gallery main-gallery">
+                      
+                        <figure>
+                          <a href="https://www.youtube.com/@coreyms" target="_blank">
+                            <img width="500"
+                                height="500"
+                                src="https://yt3.googleusercontent.com/WH6jMV6z1qAQsfEJM7KTvSpTAgzUlSZNtui8utjKqjR6UgvN2vDi4czfuqk5VPUlbuO58eZu=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
+                                alt="Corey Schafer">
+                          </a>
+                          <figcaption>Corey Schafer</figcaption>
+                          <span class="img-description">Very helpful videos about Python and software in general.</span>
+                        </figure>
+                      
+                        <figure>
+                          <a href="https://www.youtube.com/@3blue1brown" target="_blank">
+                            <img width="500"
+                                height="500"
+                                src="https://yt3.googleusercontent.com/p6z70ufLVjxQBXW-MUDUyTm47rfAlYRh3-fQ9kfpECT4CJ5OSQA7DJomSNMZ7IbtVUHIhSwa=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
+                                alt="3Blue1Brown">
+                          </a>
+                          <figcaption>3Blue1Brown</figcaption>
+                          <span class="img-description">Must watch to understand concepts of statistics, probability, and other Math domains.</span>
+                        </figure>
+                      
+                        <figure>
+                          <a href="https://www.youtube.com/@statquest" target="_blank">
+                            <img width="500"
+                                height="500"
+                                src="https://yt3.googleusercontent.com/EfKBEBfOPHn91leF2LvUsu6gj11JAgPvW1q3oIPD3WZ8AfWXxodh7IjQ28g8BY0WCYnbOpLpKQ=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
+                                alt="StatQuest with Josh Starmer">
+                          </a>
+                          <figcaption>StatQuest with Josh Starmer</figcaption>
+                          <span class="img-description">Must watch when thinking of implementing ML concepts to practice.</span>
+                        </figure>
+                      
+                        <figure>
+                          <a href="https://www.youtube.com/@NullSafeArchitect" target="_blank">
+                            <img width="500"
+                                height="500"
+                                src="https://yt3.googleusercontent.com/nkd37nuOtlS4elfvUq0CoVzCRferIjQJECzz5LedRJrjwwJ7JJ9nj6mg52iqarYPToEokbfh9Q=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
+                                alt="NullSafeArchitect">
+                          </a>
+                          <figcaption>NullSafeArchitect</figcaption>
+                          <span class="img-description">Very good tutorials about enterprise software, digital transformation, etc.</span>
+                        </figure>
+                      
+                        <figure>
+                          <a href="https://www.youtube.com/@hdeleonnet" target="_blank">
+                            <img width="500"
+                                height="500"
+                                src="https://yt3.googleusercontent.com/INGUd58oLxKnTcbY6YUGY9LQi7i7E_3a9nv7m-2VNn259P16RyOHiUlKXAYxFvrxoGF4OilltQ=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
+                                alt="hdeleon.net">
+                          </a>
+                          <figcaption>hdeleon.net</figcaption>
+                          <span class="img-description">Good to know about other software topics, tutorials, practices, podcasts, etc.</span>
+                        </figure>
+                      
+                        <figure>
+                          <a href="https://www.youtube.com/@MarcLamberti" target="_blank">
+                            <img width="500"
+                                height="500"
+                                src="https://yt3.googleusercontent.com/DDcF6CANqnV9DahMWIuKCfHaULqvtB49F7yXL1g7UudLzh7lOVYKQ8kJVYU_AMLynwO7ujDzOw=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
+                                alt="Data with Marc">
+                          </a>
+                          <figcaption>Data with Marc</figcaption>
+                          <span class="img-description">Good to know more about Airfow and its latest realeses.</span>
+                        </figure>
+                      
+                    </div>
+                  
+                </section>
+              
+            </section>
+          
+        </main>
+
+        <!-- Sidebar Section -->
+        <aside>
+          
+            <section>
+              <h2 class="section-heading">Education</h2>
+              
+                <section>
+                  <h3>
+                    
+                      <a href="https://www.epita.fr/en/msc-computer-science-program-overview/">EPITA</a>
+                    
+                  </h3>
+                  <p class="section-label">Paris, France</p>
+                  <p class="section-label">September 2024 - March 2026</p>
+                  
+                    <h4>Degrees</h4>
+                    <ul>
+                      <li>Master of Science in Computer Science</li>
+                    </ul>
+                    <p>
+                      <span class="block">Specialized in: Data Science and Analytics</span>
+                    </p>
+                  
+                </section>
+              
+                <section>
+                  <h3>
+                    
+                      <a href="https://formations.univ-grenoble-alpes.fr/fr/catalogue-2021/master-XB/master-informatique-IAQK9B8Z.html">Université Grenoble Alpes</a>
+                    
+                  </h3>
+                  <p class="section-label">Grenoble, France</p>
+                  <p class="section-label">September 2018 - July 2019</p>
+                  
+                    <h4>Degrees</h4>
+                    <ul>
+                      <li>Master of Science in Informatics</li>
+                    </ul>
+                    <p>
+                      <span class="block">Specialized in: INFORMATIQUE est délivré par l'Université Grenoble Alpes</span>
+                    </p>
+                  
+                </section>
+              
+                <section>
+                  <h3>
+                    
+                      <a href="https://uet.vnu.edu.vn/en/electronics-and-communications-engineering-technology-honors-program/">VNU, University of Engineering and Technology</a>
+                    
+                  </h3>
+                  <p class="section-label">Hanoi, Viet Nam</p>
+                  <p class="section-label">September 2009 - July 2013</p>
+                  
+                    <h4>Degrees</h4>
+                    <ul>
+                      <li>Bachelor</li>
+                    </ul>
+                    <p>
+                      <span class="block">Specialized in: Electronics and communications engineering technology (Honors Program)</span>
+                    </p>
+                  
+                </section>
+              
+            </section>
+          
+
+          
+            <section>
+              <h2 class="section-heading">Skills</h2>
+              <ul class="unstyled-list">
+                
+                  <li>
+                    <h3>Python</h3>
+                    <div class="skill-level">
+                      <span>★★★★☆</span> <!-- 4 out of 5 stars -->
+                    </div>
+                    <h2>Pandas, Scikit-learn, NumPy, Keras, TensorFlow, PyTorch</h2>
+                  </li>
+                
+                  <li>
+                    <h3>Java</h3>
+                    <div class="skill-level">
+                      <span>★★★☆☆</span> <!-- 4 out of 5 stars -->
+                    </div>
+                    <h2>Selenium for automation test</h2>
+                  </li>
+                  
+                  <li>
+                      <h3>Databases</h3>
+                      <div class="skill-level">
+                        <span>★★★☆☆</span> <!-- 4 out of 5 stars -->
+                      </div>
+                      <h2>SQL, NoSQL</h2>
+                  </li>
+                  
+                  <li>
+                    <h3>CI/CD</h3>
+                      <div class="skill-level">
+                        <span>★★★★☆</span> <!-- 4 out of 5 stars -->
+                      </div>
+                      <h2>Jenkins, Docker, Airflow</h2>
+                  </li>
+                  
+                  <li>
+                    <h3>Management tools</h3>
+                      <div class="skill-level">
+                        <span>★★★★☆</span> <!-- 4 out of 5 stars -->
+                      </div>
+                      <h2>Redmine, Jira, SVN, Git, Slack</h2>
+                  </li>
+                
+                
+              </ul>
+            </section>
+          
+
+          
+            <section>
+              <h2 class="section-heading">Languages</h2>
+              <ul class="unstyled-list">
+                
+                  <li>
+                    <h3>Vietnamese</h3>
+                    <p class="section-label">Native speaker</p>
+                  </li>
+                
+                  <li>
+                    <h3>English</h3>
+                    <p class="section-label">Advanced</p>
+                  </li>
+                
+                  <li>
+                    <h3>French</h3>
+                    <p class="section-label">Intermediate</p>
+                  </li>
+                
+              </ul>
+            </section>
+          
+        </aside>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="container">
+        <p>© 2025 Huong TA. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
