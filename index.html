@@ -1,86 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Tabbed Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    .tabs {
-      display: flex;
-      border-bottom: 2px solid #ccc;
-    }
+    <!-- Site Info -->
+    <title>Huong TA - Portfolio</title>
+    <meta name="description" content="Huong TA - Hi there, this is my personal webpage here you see more things that do not fit in my CV. I have 5 years of experience as an Engineer working with vehicles, IoT and Data. I&#39;ve worked for both private and public sectors.">
+    <meta name="author" content="Huong TA">
 
-    .tab {
-      padding: 10px 20px;
-      cursor: pointer;
-      border: none;
-      background: none;
-      border-bottom: 3px solid transparent;
-      font-weight: bold;
-    }
+    <!-- Open Graph Tags: The title of the page for social media sharing. It can match the title tag or be more descriptive. -->
+    <meta property="og:title" content="Huong TA">
 
-    .tab.active {
-      border-bottom-color: #007BFF;
-      color: #007BFF;
-    }
+    <!-- Open Graph Tags: Typically set to "website" for static sites or "article" for content-heavy pages. -->
+    <meta property="og:type" content="website">
 
-    .tab-content {
-      display: none;
-      padding: 20px 0;
-    }
+    <!-- Open Graph Tags: The URL of the page, used to ensure link previews resolve to the correct page. -->
+    <meta property="og:url" content="127.0.0.1:5500/index.html">
 
-    .tab-content.active {
-      display: block;
-    }
-  </style>
-</head>
-<body>
+    <!-- Open Graph Tags: URL of an image that represents the page. Useful for link previews. -->
+    <meta property="og:image" content="127.0.0.1:5500/portfolio_media/profile-pic.jpg">
 
-  <h1>My Skills Portfolio</h1>
+    <!-- Open Graph Tags: Provides an alternative text for the image to improve accessibility. -->
+    <meta property="og:image:alt" content="Huong TA Profile Image">
 
-  <div class="tabs">
-    <button class="tab active" onclick="openTab('skills')">Skills</button>
-    <button class="tab" onclick="openTab('projects')">Projects</button>
-    <button class="tab" onclick="openTab('contact')">Contact</button>
-  </div>
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <div id="skills" class="tab-content active">
-    <h2>Skills</h2>
-    <ul>
-      <li>Python - 7/10</li>
-      <li>HTML/CSS - 8/10</li>
-      <li>JavaScript - 6/10</li>
-    </ul>
-  </div>
+    <!-- Custom Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+          rel="stylesheet">
 
-  <div id="projects" class="tab-content">
-    <h2>Projects</h2>
-    <p>Project A: Portfolio Website</p>
-    <p>Project B: Data Analysis Tool</p>
-  </div>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/modern_normalize.css" />
+    <link rel="stylesheet" href="css/html5bp.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/body.css">
 
-  <div id="contact" class="tab-content">
-    <h2>Contact</h2>
-    <p>Email: you@example.com</p>
-    <p>LinkedIn: your-linkedin</p>
-  </div>
+    <!-- Set a theme color that matches your website's primary color -->
+    <meta name="theme-color" content="#fafafa">
 
-  <script>
-    function openTab(tabId) {
-      const tabs = document.querySelectorAll('.tab');
-      const contents = document.querySelectorAll('.tab-content');
+    <!-- Favicon for all browsers -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
 
-      tabs.forEach(tab => tab.classList.remove('active'));
-      contents.forEach(content => content.classList.remove('active'));
+    <!-- Apple touch icon for iOS devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon.png">
 
-      document.querySelector(`#${tabId}`).classList.add('active');
-      event.currentTarget.classList.add('active');
-    }
-  </script>
+    <!-- Web app manifest for Progressive Web Apps -->
+    <link rel="manifest" href="/site.webmanifest">
 
-</body>
+    <!-- Content Security Policy: Uncomment to enhance security by restricting where content can be loaded from (useful for preventing certain attacks like XSS). Update if adding external sources (e.g., Google Fonts, Bootstrap CDN, analytics, etc). -->
+    <!-- <meta http-equiv="Content-Security-Policy" content=" default-src 'self'; script-src 'self' code.jquery.com; style-src 'self' fonts.googleapis.com; font-src fonts.gstatic.com; img-src 'self' images.examplecdn.com; "> -->
+  </head>
+
+  <body>
+    <div id="header-placeholder"></div>
+    <script>
+      fetch('/pages/header.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    </script>
+    
+
+    <meta charset="UTF-8">
+    <title>Tabbed Page</title>
+  
+    <div class="tabs">
+      <button class="tab" onclick="openTab(event, 'about')">About</button>
+      <button class="tab" onclick="openTab(event, 'projects')">Projects</button>
+      <button class="tab" onclick="openTab(event, 'datas')">DS|DA|DE</button>
+      <button class="tab" onclick="openTab(event, 'resume_en')">CV</button>
+      <button class="tab" onclick="openTab(event, 'portfolio')">portfolio</button>
+    </div>
+
+    <div id="portfolio" class="tab-content">
+      <!-- <h2>Portfolio</h2> -->
+      <div id="portfolio-placeholder"></div>
+      <script>
+        fetch('/pages/portfolio.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('portfolio-placeholder').innerHTML = data;
+          })
+          .catch(error => console.error('Error loading portfolio.html:', error));
+      </script>
+    </div>
+
+    <!-- <div id="about" class="tab-content active">
+      <div class="about-text">
+        <p>I completed my MS in Computer Science student (majoring in Data Science and Analysis) at Epita (école d'ingénieurs en informatique). In this programme, I rely on machine learning, computer vision, and data science in production. </p>
+        <p>I worked as a software development engineer before joining Epita, where I was exposed to systems that needed a high level of complexity.</p>
+
+      </div>
+    </div>
+    </div> -->
+
+    <div id="about" class="tab-content active">
+      <div class="about-text">
+        <p>A young person once asked, "Hey, 8x and 9x guys. I'm a Gen Z guy, but I'm really curious about what you went through when you saw the integration of the country. What was the atmosphere like back then? How did you feel when you first came into contact with the internet? Was it like how we are with AI now?"</p>
+        <p>And I answered: "No. With integration, there was excitement for new things, and it came slowly—year by year. With AI, there’s confusion; this wave is coming too fast—month by month."</p>
+        <p>I’ve been in the IT industry since 2015.</p>
+        <p>I had the opportunity to try my hand as a leader, managing a test team that at one point grew to 15 people. It was an interesting but also stressful role, and it reaffirmed that I’m more suited to technology-focused work.</p>
+        <p>In 2020, I fully transitioned into automation testing.</p>
+        <p>I worked in the IT industry during its peak—when it was one of the hottest fields. But by 2022, I started thinking about the next big technological direction when software development was beginning to feel saturated.</p>
+        <p>In 2024, I began to explore what "it" was at EPITA. I'm still excited by new challenges. I want to learn—to understand where the world is heading, to differentiate between AI, machine learning, and deep learning, and to see how the world works and how we are training machines to understand us.</p>
+        <p>Now, I’m actively looking for opportunities to learn and contribute to this wave of technological advancement.</p>
+      </div>
+    </div>
+    </div>
+
+    <div id="resume_en" class="tab-content">
+      <!-- <h2>Portfolio</h2> -->
+      <div id="resume_en-placeholder"></div>
+      <script>
+        fetch('/pages/resume_en.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('resume_en-placeholder').innerHTML = data;
+          })
+          .catch(error => console.error('Error loading resume.html:', error));
+      </script>
+
+    </div>
+
+
+    <footer class="page-footer">
+      <div class="container">
+        <p>© 2025 Huong TA. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+
+  </body>
 </html>

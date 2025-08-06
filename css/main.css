@@ -79,6 +79,13 @@ a:hover {
   text-decoration: underline;
 }
 
+.title {
+    color: #428bca;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
 address {
   font-style: normal;
 }
@@ -169,10 +176,19 @@ section {
 }
 
 .link-with-icon {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.4rem;
+  text-decoration: none;
+  color: #0366d6;
+  font-size: 1rem;
+  white-space: nowrap;
 }
+
+.link-with-icon svg {
+  flex-shrink: 0;
+}
+
 
 .header-label {
   font-size: 1.3rem;
@@ -272,13 +288,19 @@ aside li {
 }
 
 .inline-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
   list-style: none;
-  gap: 0.25rem;
+  padding: 0;
+  margin: 0;
 }
 
 .inline-list li {
-  display: flex; /* This is for HTML Whitespace Issues */
+  display: inline-flex;
+  align-items: center;
 }
+
 
 /* Skillbars 
 .skill-bar {
