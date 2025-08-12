@@ -72,39 +72,24 @@
       <button class="tab" onclick="openTab(event, 'projects')">Projects</button>
       <button class="tab" onclick="openTab(event, 'datas')">DS|DA|DE</button>
       <button class="tab" onclick="openTab(event, 'resume_en')">CV</button>
-      <button class="tab" onclick="openTab(event, 'portfolio')">portfolio</button>
     </div>
-
-    <div id="portfolio" class="tab-content">
-      <!-- <h2>Portfolio</h2> -->
-      <div id="portfolio-placeholder"></div>
-      <script>
-        fetch('/pages/portfolio.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('portfolio-placeholder').innerHTML = data;
-          })
-          .catch(error => console.error('Error loading portfolio.html:', error));
-      </script>
-    </div>
-
-    <!-- <div id="about" class="tab-content active">
-      <div class="about-text">
-        <p>I completed my MS in Computer Science student (majoring in Data Science and Analysis) at Epita (école d'ingénieurs en informatique). In this programme, I rely on machine learning, computer vision, and data science in production. </p>
-        <p>I worked as a software development engineer before joining Epita, where I was exposed to systems that needed a high level of complexity.</p>
-
-      </div>
-    </div>
-    </div> -->
 
     <div id="about" class="tab-content active">
       <div class="about-text">
-        <p>A young person once asked, "Hey, 8x and 9x guys. I'm a Gen Z guy, but I'm really curious about what you went through when you saw the integration of the country. What was the atmosphere like back then? How did you feel when you first came into contact with the internet? Was it like how we are with AI now?"</p>
-        <p>And I answered: "No. With integration, there was excitement for new things, and it came slowly—year by year. With AI, there’s confusion; this wave is coming too fast—month by month."</p>
-        <p>I’ve been in the IT industry since 2015.</p>
-        <p>I had the opportunity to try my hand as a leader, managing a test team that at one point grew to 15 people. It was an interesting but also stressful role, and it reaffirmed that I’m more suited to technology-focused work.</p>
-        <p>In 2020, I fully transitioned into automation testing.</p>
-        <p>I worked in the IT industry during its peak—when it was one of the hottest fields. But by 2022, I started thinking about the next big technological direction when software development was beginning to feel saturated.</p>
+        <p>
+          A young person once asked: 
+          <span style="font-style: italic;">
+            "Hey, 8x and 9x guys. I'm a Gen Z guy, but I'm really curious about what you went through when you saw the integration of the country. What was the atmosphere like back then? How did you feel when you first came into contact with the internet? Was it like how we are with AI now?"
+          </span>
+        </p>
+        <p>
+          And I answered: 
+          <span style="font-style: italic;">
+            "No. With integration, there was excitement for new things, and it came slowly—year by year. With AI, there’s confusion; this wave is coming too fast—month by month."
+          </span>
+        </p>
+        <p>I’ve been in the IT industry since 2015. I had the opportunity to try my hand as a leader, managing a test team that at one point grew to 15 people. It was an interesting but also stressful role, and it reaffirmed that I’m more suited to technology-focused work. In 2020, I fully transitioned into automation testing.</p>
+        <p>I worked in the IT industry during its peak—when it was one of the hottest fields. By 2022, I started thinking about the next big technological direction when software development was beginning to feel saturated.</p>
         <p>In 2024, I began to explore what "it" was at EPITA. I'm still excited by new challenges. I want to learn—to understand where the world is heading, to differentiate between AI, machine learning, and deep learning, and to see how the world works and how we are training machines to understand us.</p>
         <p>Now, I’m actively looking for opportunities to learn and contribute to this wave of technological advancement.</p>
       </div>
@@ -125,6 +110,32 @@
 
     </div>
 
+    <div id="datas" class="tab-content">
+      <div id="datas-placeholder"></div>
+      <script>
+        fetch('/pages/data_epita.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('datas-placeholder').innerHTML = data;
+          })
+          .catch(error => console.error('Error loading resume.html:', error));
+      </script>
+
+    </div>
+
+
+    <div id="projects" class="tab-content">
+      <div id="projects-placeholder"></div>
+      <script>
+        fetch('/pages/projects.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('projects-placeholder').innerHTML = data;
+          })
+          .catch(error => console.error('Error loading resume.html:', error));
+      </script>
+
+    </div>
 
     <footer class="page-footer">
       <div class="container">

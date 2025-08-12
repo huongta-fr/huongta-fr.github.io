@@ -71,10 +71,48 @@ margin-left: 50px;*/
 
 .about-text {
     /* font-family: "Courier New", monospace; */
-    max-width: 600px;
+    max-width: 900px;
     margin: 40px auto;
     line-height: 1.6;
     font-size: 1em;
     text-align: center;
     margin-bottom: 50px
+}
+
+.card {
+  padding: 0 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.text-justified {
+  text-align: justify;   /* keep justified paragraphs */
+  word-wrap: break-word;
+}
+
+.card ul {
+  padding-left: 40px;   /* space from the left edge */
+  padding-right: 40px;  /* optional: space from the right edge */
+  margin: 16px 0;       /* vertical spacing around the list */
+}
+
+.card li {
+  margin-bottom: 8px;   /* space between list items */
+  line-height: 1.5;     /* better readability */
+}
+
+.image-center {
+  text-align: center;   /* centers image and link horizontally */
+  margin: 20px 0;       /* space above and below */
+}
+
+.image-center img {
+  display: block;
+  margin: 0 auto;       /* extra centering for the image itself */
+}
+
+.image-center a {
+  display: block;       /* put link on its own line */
+  margin-top: 8px;      /* space between image and link */
 }
