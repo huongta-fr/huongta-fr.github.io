@@ -4,6 +4,8 @@ body {
     margin: 0px;
     }
 
+
+
 .tabs {
     display: flex;
     justify-content: center; /* Center horizontally */
@@ -51,9 +53,6 @@ body {
 }
 
 .skills {
-    /*position: relative;
-left: 100%;
-margin-left: 50px;*/
     color: green;
     margin-bottom: 40px;
 }
@@ -103,16 +102,114 @@ margin-left: 50px;*/
 }
 
 .image-center {
+  overflow: visible !important;
+  position: relative;
   text-align: center;   /* centers image and link horizontally */
   margin: 20px 0;       /* space above and below */
 }
 
 .image-center img {
-  display: block;
-  margin: 0 auto;       /* extra centering for the image itself */
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.image-center img.original-quality {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  
+  /* Prevent browser smoothing (very important) */
+  image-rendering: -webkit-optimize-contrast; /* Chrome, Safari */
+  image-rendering: crisp-edges; /* Firefox, Edge */
+  image-rendering: pixelated; /* fallback for diagrams */
+
+  /* Optional: add a soft shadow to isolate it visually */
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
 
 .image-center a {
-  display: block;       /* put link on its own line */
-  margin-top: 8px;      /* space between image and link */
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
 }
+
+/* Zoom container */
+.zoomable {
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fullscreen overlay when zoomed */
+.zoom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.zoom-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+
+.sidebar {
+  background-color: #f6f7e6;
+  /* height: 100vh; Full viewport height */
+  position: fixed; /* Stay fixed on the left */
+  top: 0;
+  left: 0;
+  width: 220px; /* Fixed width for sidebar */
+  padding-top: 100px; /* Leave space for top navbar */
+  overflow-y: auto; /* Scroll if too long */
+  border-right: 1px solid #ccc;
+}
+
+.sidebar .nav-link {
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #d9e6f3;
+}
+
+.sidebar .nav-link.active {
+  background-color: #d9e6f3;
+  font-weight: bold;
+}
+
+.submenu {
+  margin-left: 10px;
+  border-left: 2px solid #555;
+  padding-left: 10px;
+}
+
+
+.content {
+  margin-left: 240px;
+  padding: 40px;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.content-section {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
