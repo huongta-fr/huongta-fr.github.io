@@ -121,9 +121,12 @@
         const book = JSON.parse(line);
         
         const title = book.title_vi || book.title_eng || book.org_title || '';
+        const titleVi = book.title_vi || '';
+        const orgTitle = book.org_title || '';
         const author = book.author || '';
         const bookId = book.book_id || '';
         const imageUrl = book.img_url || '';
+        const locationSource = book.location_source || '';
         
         if (!title || !author) return;
         
@@ -141,7 +144,8 @@
                 place: placeName,
                 lat: loc.lat || null,
                 lng: loc.lng || null,
-                imageUrl: imageUrl
+                imageUrl: imageUrl,
+                source: locationSource
               });
             }
           });
@@ -153,6 +157,8 @@
         books.push({
           id: `goodreads-${bookId}`,
           title,
+          titleVi,
+          orgTitle,
           author,
           year: book.year || '',
           color: FALLBACK_COLORS[idx % FALLBACK_COLORS.length],
@@ -546,7 +552,20 @@
         marker.bindTooltip(`${location.place} · ${book.title}`, { direction: 'top' });
         
         // Build popup content with image
-        let popupHtml = `<strong>${escapeHtml(book.title)}</strong><br><span>${escapeHtml(location.place)}</span>`;
+        let popupHtml = `<strong>${escapeHtml(book.title)}</strong>`;
+        
+        // Add original title if different from Vietnamese title
+        if (book.orgTitle && book.orgTitle !== book.titleVi) {
+          popupHtml += `<br><em>${escapeHtml(book.orgTitle)}</em>`;
+        }
+        
+        // Add location with source label
+        let locationLabel = escapeHtml(location.place);
+        const sourceLabel = getSourceLabel(location.source);
+        if (sourceLabel) {
+          locationLabel += ` <small style="color: #999;">(${sourceLabel})</small>`;
+        }
+        popupHtml += `<br><span>${locationLabel}</span>`;
         
         // Use image URL from location or fall back to book's image_url
         const imageUrl = location.imageUrl || book.image_url;
@@ -573,6 +592,15 @@
 
   function getRandomBookIcon() {
     return BOOK_ICONS[Math.floor(Math.random() * BOOK_ICONS.length)];
+  }
+
+  function getSourceLabel(source) {
+    const labels = {
+      'goodreads_setting': 'setting',
+      'author_born': 'author',
+      'none': ''
+    };
+    return labels[source] || source;
   }
 
   function updateBookCounter() {
