@@ -76,43 +76,61 @@
   }
 
   async function loadBooks() {
+    console.log(`Starting to load books...`);
     const jsonlBooks = await loadBooksFromJsonl();
+    console.log(`Loaded from JSONL: ${jsonlBooks.length} books`);
+    
     const savedBooks = loadSavedBooks();
+    console.log(`Loaded from localStorage: ${savedBooks.length} books`);
 
     if (jsonlBooks.length) {
       state.books = mergeBooks(jsonlBooks, savedBooks);
+      console.log(`✓ Using JSONL books (merged with saved): ${state.books.length} total`);
     } else if (savedBooks.length) {
       state.books = savedBooks;
+      console.log(`✓ Using saved books from localStorage: ${state.books.length}`);
     } else {
       state.books = await loadSeedBooks();
+      console.log(`✓ Using seed books: ${state.books.length}`);
     }
 
+    console.log(`📚 Final state.books: ${state.books.length} books loaded`);
     persist();
     
     // No need for background geocoding - coordinates already in JSONL!
   }
 
   async function loadBooksFromJsonl() {
-    const paths = ['/literary_world_map/books_enriched.jsonl', '/data/books_enriched.jsonl', '/books_enriched.jsonl'];
+    const paths = [
+      '/literary_world_map/books_enriched.jsonl',  // Absolute path from root
+      'books_enriched.jsonl',                        // Relative to current page
+      '../data/books_enriched.jsonl',               // Fallback: data folder
+      '/data/books_enriched.jsonl'                  // Absolute path: data folder
+    ];
     let jsonlText = null;
 
     for (const path of paths) {
       try {
         const res = await fetch(path);
+        console.log(`  Tried ${path}: ${res.status} ${res.statusText}`);
         if (res.ok) {
           jsonlText = await res.text();
-          console.log(`✓ Loaded JSONL from: ${path}`);
+          console.log(`✅ Successfully loaded JSONL from: ${path} (${jsonlText.length} bytes)`);
           break;
         }
       } catch (error) {
-        console.warn(`Could not load ${path}`, error);
+        console.warn(`  ⚠️ Fetch error for ${path}:`, error.message);
       }
     }
 
-    if (!jsonlText) return [];
+    if (!jsonlText) {
+      console.error('❌ Failed to load JSONL from ANY of these paths:', paths);
+      return [];
+    }
 
     const books = [];
     const lines = jsonlText.trim().split('\n');
+    console.log(`📄 Parsing ${lines.length} lines from JSONL...`);
     
     lines.forEach((line, idx) => {
       if (!line.trim()) return;
