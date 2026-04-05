@@ -1,0 +1,372 @@
+.literary-layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(320px, 1fr);
+  gap: 1rem;
+}
+
+.literary-panel {
+  background: var(--content-panel-bg);
+  color: var(--content-panel-text);
+  border: 1px solid var(--content-panel-border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.panel-header h2 {
+  margin-bottom: 0.35rem;
+  color: #24314a;
+}
+
+.panel-header p {
+  margin-top: 0;
+  color: #4a5774;
+}
+
+#world-map {
+  width: 100%;
+  height: 580px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #c6d3ea;
+}
+
+.mode-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.mode-tab {
+  border: 1px solid #c0cce5;
+  background: #e8edf7;
+  border-radius: 8px;
+  padding: 0.45rem 0.75rem;
+  color: #2f3d59;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mode-tab.active {
+  background: #d7f1ff;
+  border-color: #7ec7e8;
+  color: #195d88;
+}
+
+.mode-view {
+  display: none;
+}
+
+.mode-view.active {
+  display: block;
+}
+
+.book-actions {
+  display: grid;
+  gap: 0.45rem;
+  margin-bottom: 0.75rem;
+}
+
+.search-label {
+  color: #3a4b67;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+#book-search {
+  border: 1px solid #bdcde7;
+  border-radius: 8px;
+  padding: 0.45rem 0.6rem;
+  background: #fff;
+  color: #1f2d43;
+}
+
+.helper-text {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  color: #5a6b88;
+  font-size: 0.86rem;
+}
+
+.geocode-status {
+  margin: 0.25rem 0 0.45rem;
+  min-height: 1.05rem;
+  font-size: 0.84rem;
+  color: #3c567f;
+}
+
+.geocode-status.success {
+  color: #0f7a52;
+}
+
+.geocode-status.error {
+  color: #b54747;
+}
+
+.ghost-btn.loading {
+  opacity: 0.72;
+  pointer-events: none;
+}
+
+#clear-highlight,
+.form-card button,
+.ghost-btn {
+  border: 1px solid #adc1e6;
+  background: #edf4ff;
+  color: #29426b;
+  border-radius: 8px;
+  padding: 0.45rem 0.75rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.book-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.6rem;
+  max-height: 640px;
+  overflow-y: auto;
+}
+
+.book-item {
+  border: 1px solid #c3d2eb;
+  border-left: 8px solid var(--book-color, #7aa2ff);
+  border-radius: 10px;
+  padding: 0.55rem 0.7rem;
+  background: #f5f8ff;
+  cursor: pointer;
+}
+
+.book-item.active {
+  border-color: #66c7f5;
+  box-shadow: 0 0 0 2px rgba(97, 184, 255, 0.22);
+  background: #e9f8ff;
+}
+
+.book-title {
+  font-weight: 700;
+  color: #22314a;
+}
+
+.book-meta {
+  color: #52627f;
+  font-size: 0.92rem;
+}
+
+.book-locations {
+  margin-top: 0.25rem;
+  font-size: 0.87rem;
+  color: #3b4d6f;
+}
+
+.location-editor-list {
+  margin-top: 0.45rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.location-editor-btn {
+  border: 1px dashed #9ab4df;
+  background: #eef4ff;
+  color: #28466f;
+  border-radius: 8px;
+  padding: 0.35rem 0.5rem;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.86rem;
+}
+
+.location-editor-btn:hover {
+  background: #e3f3ff;
+  border-color: #69bde8;
+}
+
+.form-card {
+  border: 1px solid #ccdaef;
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  background: #f7f9ff;
+}
+
+.form-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #2a3852;
+  font-size: 1rem;
+}
+
+.form-card label {
+  display: block;
+  margin-bottom: 0.55rem;
+  color: #364865;
+  font-size: 0.92rem;
+}
+
+.form-card input,
+.form-card select {
+  width: 100%;
+  border: 1px solid #becde6;
+  border-radius: 8px;
+  padding: 0.4rem 0.45rem;
+  margin-top: 0.2rem;
+  background: #ffffff;
+  color: #1f2d43;
+}
+
+.inline-fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.45rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 11, 23, 0.52);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2200;
+  padding: 1rem;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-card {
+  width: min(520px, 100%);
+  background: #edf3ff;
+  border: 1px solid #a8c0e8;
+  border-radius: 12px;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.65rem 0.8rem 0;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #263750;
+}
+
+#close-location-modal {
+  border: 1px solid #b7c8e7;
+  background: #f6f9ff;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #3d516f;
+  width: 32px;
+  height: 32px;
+}
+
+.form-card.compact {
+  margin: 0.6rem 0.8rem 0.8rem;
+}
+
+.location-image-preview {
+  margin: 0.3rem 0 0.7rem;
+}
+
+.location-image-preview img {
+  max-width: 100%;
+  border-radius: 8px;
+  border: 1px solid #bfd1ea;
+}
+
+.modal-actions {
+  margin-top: 0.35rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.45rem;
+}
+
+.empty-note {
+  color: #617392;
+  font-style: italic;
+}
+
+@media (max-width: 980px) {
+  .literary-layout {
+    grid-template-columns: 1fr;
+  }
+
+  #world-map {
+    height: 430px;
+  }
+}
+
+/* Book marker styling - PNG icon with transparent background */
+.book-marker {
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
+  transition: filter 0.2s ease;
+  background: transparent !important;
+  image-rendering: crisp-edges;
+}
+
+.book-marker:hover {
+  filter: drop-shadow(0 0 8px rgba(255, 200, 0, 0.6));
+}
+
+/* Circular book marker with border */
+.book-marker-circular {
+  border-radius: 50% !important;
+  border: 3px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  background-clip: padding-box;
+  overflow: hidden;
+}
+
+.book-marker-circular:hover {
+  border-color: rgba(255, 200, 0, 0.9) !important;
+  box-shadow: 0 0 12px rgba(255, 200, 0, 0.6);
+}
+
+/* Leaflet marker icon container - ensure PNG transparency works */
+.leaflet-marker-icon {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 50% !important;
+}
+
+.leaflet-popup-content {
+  font-size: 0.9rem;
+}
+
+.leaflet-popup-content strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #1a1a1a;
+}
+
+.leaflet-popup-content span {
+  display: block;
+  color: #555;
+  font-size: 0.85rem;
+}
+
+.leaflet-popup-content em {
+  display: block;
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.2rem;
+}
+
+.leaflet-popup-content img {
+  max-width: 160px;
+  height: auto;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+
+    <title>Huong TA - CV</title>
+    <meta name="description" content="Huong TA - Resume page.">
+    <meta name="author" content="Huong TA">
+
+    <meta property="og:title" content="Huong TA - CV">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://huongta-fr.github.io/resume_en/">
+    <meta property="og:image" content="/portfolio_media/profile-pic.jpg">
+    <meta property="og:image:alt" content="Huong TA Profile Image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/modern_normalize.css" />
+    <link rel="stylesheet" href="/css/html5bp.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/body.css">
+
+    <meta name="theme-color" content="#fafafa">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+  </head>
+
+  <body>
+    <div id="header-placeholder"></div>
+    <script>
+      fetch('/pages/header.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    </script>
+
+    <div class="tabs">
+      <button class="tab" onclick="window.location.href='/'">About</button>
+      <button class="tab" onclick="window.location.href='/data_epita/'">Data Scientist</button>
+      <button class="tab" onclick="window.location.href='/projects/'">QA</button>
+      <button class="tab active" onclick="window.location.href='/resume_en/'">CV</button>
+      <button class="tab" onclick="window.location.href='/literary_world_map/'">Literary World Map</button>
+    </div>
+
+    <div class="tab-content active">
+      <div id="resume_en-placeholder"></div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="container">
+        <p>© 2025 Huong TA. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      fetch('/pages/resume_en.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('resume_en-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading resume.html:', error));
+    </script>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>

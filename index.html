@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
 
     <!-- Site Info -->
     <title>Huong TA - Portfolio</title>
@@ -68,10 +69,11 @@
     <title>Tabbed Page</title>
   
     <div class="tabs">
-      <button class="tab" onclick="openTab(event, 'about')">About</button>
-      <button class="tab" onclick="openTab(event, 'datas')">Data at Epita</button>
-      <button class="tab" onclick="openTab(event, 'projects')">QA</button>
-      <button class="tab" onclick="openTab(event, 'resume_en')">CV</button>
+      <button class="tab active" onclick="window.location.href='/'">About</button>
+      <button class="tab" onclick="window.location.href='/data_epita/'">Data Scientist</button>
+      <button class="tab" onclick="window.location.href='/projects/'">QA</button>
+      <button class="tab" onclick="window.location.href='/resume_en/'">CV</button>
+      <button class="tab" onclick="window.location.href='/literary_world_map/'">Literary World Map</button>
     </div>
 
     <div id="about" class="tab-content active">

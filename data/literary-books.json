@@ -1,0 +1,38 @@
+[
+  {
+    "id": "book-1984",
+    "title": "1984",
+    "author": "George Orwell",
+    "year": "1949",
+    "color": "#ff6b6b",
+    "locations": [
+      {
+        "place": "London, UK",
+        "lat": 51.5074,
+        "lng": -0.1278,
+        "note": "Airstrip One / Oceania"
+      }
+    ]
+  },
+  {
+    "id": "book-little-prince",
+    "title": "The Little Prince",
+    "author": "Antoine de Saint-Exupéry",
+    "year": "1943",
+    "color": "#4ecdc4",
+    "locations": [
+      {
+        "place": "Sahara Desert, Egypt",
+        "lat": 25.2854,
+        "lng": 30.5276,
+        "note": "Narrator meets the Little Prince"
+      },
+      {
+        "place": "Paris, France",
+        "lat": 48.8566,
+        "lng": 2.3522,
+        "note": "Author connection"
+      }
+    ]
+  }
+]
