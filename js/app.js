@@ -9,6 +9,20 @@ function openTab(event, tabId) {
         event.currentTarget.classList.add('active');
       }
 
+// Smooth navigation function to reduce lag/blink when switching tabs
+function navigateToTab(url, event) {
+  event.preventDefault();
+  
+  // Add fade-out animation
+  document.body.style.opacity = '0';
+  document.body.style.transition = 'opacity 0.25s ease-out';
+  
+  // Navigate after fade completes
+  setTimeout(() => {
+    window.location.href = url;
+  }, 250);
+}
+
 // New function for sidebar (DS|DA|DE menu)
 function openMenu(event, sectionId) {
     // Hide all content sections

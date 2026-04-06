@@ -37,6 +37,10 @@ a {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
+.page-header h1 {
+  color: #b8fbff !important;
+}
+
 .header-label,
 .section-label,
 figcaption {
@@ -100,6 +104,8 @@ figcaption {
   border-radius: 16px;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.35s ease-in-out;
 }
 
 .tab-content.active {
@@ -109,6 +115,21 @@ figcaption {
   align-items: center;
   padding: 16px 22px;
   margin-top: 0;
+  opacity: 1;
+}
+
+/* Smooth page load animation */
+body {
+  animation: pageLoad 0.3s ease-out forwards;
+}
+
+@keyframes pageLoad {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .resume div.resume-line {

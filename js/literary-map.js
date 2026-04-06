@@ -169,7 +169,7 @@
           });
         }
         
-        // Skip books with no locations
+        // Skip books with no locationsg
         if (locations.length === 0) return;
         
         books.push({
