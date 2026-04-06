@@ -464,15 +464,29 @@
       li.style.setProperty('--book-color', book.color || '#7aa2ff');
       li.classList.toggle('active', book.id === state.selectedBookId);
 
+      // Display org_title first (or title_vi if no org_title), then show title_vi as additional info
+      const displayTitle = book.orgTitle || book.titleVi || book.title || '';
+      const additionalInfo = (book.orgTitle && book.titleVi && book.orgTitle !== book.titleVi) 
+        ? `<div class="book-subtitle">(${escapeHtml(book.titleVi)})</div>` 
+        : '';
+
       li.innerHTML = `
-        <div class="book-title">${escapeHtml(book.title)}</div>
+        <div class="book-title">${escapeHtml(displayTitle)}</div>
+        ${additionalInfo}
         <div class="book-meta">${escapeHtml(book.author)}${book.year ? ` · ${escapeHtml(book.year)}` : ''}</div>
         <div class="book-locations">${(book.locations || []).length} location(s)</div>
       `;
 
       li.addEventListener('click', () => {
-        state.selectedBookId = state.selectedBookId === book.id ? null : book.id;
-        renderAll();
+        // Toggle selection and zoom to book's locations
+        if (state.selectedBookId === book.id) {
+          state.selectedBookId = null;
+          renderAll();
+        } else {
+          state.selectedBookId = book.id;
+          renderAll();
+          zoomToBook(book);
+        }
       });
 
       if (book.id === state.selectedBookId) {
@@ -634,6 +648,30 @@
     }
     
     refs.bookCounter.textContent = counterText;
+  }
+
+  function zoomToBook(book) {
+    if (!book.locations || book.locations.length === 0) return;
+
+    // Calculate bounds for this book's locations
+    const bookBounds = [];
+    (book.locations || []).forEach((location) => {
+      if (location.lat !== null && location.lng !== null && isFinite(location.lat) && isFinite(location.lng)) {
+        bookBounds.push([location.lat, location.lng]);
+      }
+    });
+
+    if (bookBounds.length === 0) return;
+
+    // Zoom to fit all locations of this book
+    if (bookBounds.length === 1) {
+      // Single location: zoom in more
+      state.map.setView(bookBounds[0], 10, { animate: true });
+    } else {
+      // Multiple locations: fit all in bounds
+      const bounds = L.latLngBounds(bookBounds);
+      state.map.fitBounds(bounds, { padding: [50, 50], animate: true, maxZoom: 12 });
+    }
   }
 
   function getFilteredBooks() {

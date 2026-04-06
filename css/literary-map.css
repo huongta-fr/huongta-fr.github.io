@@ -150,6 +150,13 @@
   color: #22314a;
 }
 
+.book-subtitle {
+  font-size: 0.88rem;
+  color: #5a6b88;
+  font-style: italic;
+  margin: 0.15rem 0 0.25rem 0;
+}
+
 .book-meta {
   color: #52627f;
   font-size: 0.92rem;

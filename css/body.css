@@ -41,6 +41,10 @@ a {
   color: #b8fbff !important;
 }
 
+.page-header .header-summary {
+  color: #e5f2ff !important;
+}
+
 .header-label,
 .section-label,
 figcaption {
