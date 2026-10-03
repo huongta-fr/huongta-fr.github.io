@@ -1,72 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <base href="/">
 
-    <title>Huong TA - Data Scientist</title>
-    <meta name="description" content="Huong TA - Data Scientist page.">
-    <meta name="author" content="Huong TA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta property="og:title" content="Huong TA - Data Scientist">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://huongta-fr.github.io/data_epita/">
-    <meta property="og:image" content="/portfolio_media/profile-pic.jpg">
-    <meta property="og:image:alt" content="Huong TA Profile Image">
+  <title>Huong TA - Data Scientist</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-          rel="stylesheet">
+  <meta
+    name="description"
+    content="Data science profile and academic projects of Huong TA."
+  >
 
-    <link rel="stylesheet" href="/css/modern_normalize.css" />
-    <link rel="stylesheet" href="/css/html5bp.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/body.css">
+  <meta name="author" content="Huong TA">
 
-    <meta name="theme-color" content="#fafafa">
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" sizes="180x180" href="/icon.png">
-    <link rel="manifest" href="/site.webmanifest">
-  </head>
+  <meta property="og:title" content="Huong TA - Data Scientist">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://huongta-fr.github.io/data_epita/">
+  <meta property="og:image" content="/portfolio_media/profile-pic.jpg">
+  <meta property="og:image:alt" content="Huong TA Profile Image">
 
-  <body>
-    <div id="header-placeholder"></div>
-    <script>
-      fetch('/pages/header.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('header-placeholder').innerHTML = data);
-    </script>
+  <link rel="stylesheet" href="/css/body.css">
 
-    <div class="tabs">
-      <button class="tab" onclick="window.location.href='/'">About</button>
-      <button class="tab active" onclick="window.location.href='/data_epita/'">Data Scientist</button>
-      <button class="tab" onclick="window.location.href='/projects/'">QA</button>
-      <button class="tab" onclick="window.location.href='/resume_en/'">CV</button>
-      <button class="tab" onclick="window.location.href='/literary_world_map/'">Literary World Map</button>
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+
+<body>
+
+  <div class="container">
+
+    <!-- =========================
+         Header
+    ========================== -->
+
+    <header class="site-header">
+
+      <h1>Huong TA</h1>
+
+      <p class="subtitle">
+        Software Testing Engineer · Data Scientist
+      </p>
+
+      <nav>
+        <a href="/">about</a>
+        <span>|</span>
+
+        <a href="/resume_en/">profile</a>
+        <span>|</span>
+
+        <a href="/projects/">projects</a>
+        <span>|</span>
+
+        <a href="/data_epita/" class="active">data scientist</a>
+        <span>|</span>
+
+        <a href="/literary_world_map/">literary world map</a>
+      </nav>
+
+    </header>
+
+
+    <!-- =========================
+         Data Science
+    ========================== -->
+
+    <main>
+
+      <section>
+
+        <h2>Data Scientist</h2>
+
+        <p>
+          My transition toward data science began with a desire
+          to better understand machine learning, deep learning
+          and the growing role of AI in software and society.
+        </p>
+
+        <p>
+          At EPITA, I developed a stronger foundation in data
+          analysis, machine learning and applied artificial
+          intelligence, while continuing to build on my
+          professional background in software quality and
+          automation.
+        </p>
+
+      </section>
+
+
+      <hr>
+
+
+      <section>
+
+        <h2>Academic Background</h2>
+
+        <div class="profile-entry">
+
+          <div class="profile-year">
+            2024–2026
+          </div>
+
+          <div class="profile-content">
+
+            <strong>
+              Master 2 Computer Science — Data Science & Analytics
+            </strong>
+
+            <p>
+              EPITA
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <hr>
+
+
+      <section>
+
+        <h2>Areas of Interest</h2>
+
+        <p>
+          Machine learning · Deep learning · Computer vision ·
+          Data analysis · Artificial intelligence ·
+          Data quality · Automation
+        </p>
+
+      </section>
+
+
+      <hr>
+
+
+      <section>
+
+        <h2>Projects</h2>
+
+        <article class="project-entry">
+
+          <h3>
+            Generalizable Instance Segmentation under
+            Visual Style and Domain Shifts
+          </h3>
+
+          <p>
+            Research project focused on instance segmentation
+            across manga, webtoon and western comic styles,
+            with particular attention to robustness under
+            domain and visual-style shifts.
+          </p>
+
+          <p>
+            Topics include synthetic data generation,
+            dataset construction, instance segmentation,
+            domain generalization and model evaluation.
+          </p>
+
+        </article>
+
+
+        <article class="project-entry">
+
+          <h3>
+            ETL & Data Quality Testing
+          </h3>
+
+          <p>
+            End-to-end data quality and ETL testing framework
+            using Python, SQL, PostgreSQL and automated
+            validation.
+          </p>
+
+        </article>
+
+      </section>
+
+
+      <hr>
+
+
+      <section>
+
+        <h2>Technical Stack</h2>
+
+        <p>
+          Python · SQL · Pandas · PyTorch · TensorFlow ·
+          PostgreSQL · Docker · Git · MLflow
+        </p>
+
+      </section>
+
+
+      <hr>
+
+
+      <section>
+
+        <h2>Explore</h2>
+
+        <p>
+          <a href="/projects/">QA Projects</a>
+          ·
+          <a href="/resume_en/">CV</a>
+          ·
+          <a href="/literary_world_map/">Literary World Map</a>
+        </p>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <!-- =========================
+       Footer
+  ========================== -->
+
+  <footer class="page-footer">
+
+    <div class="footer-inner">
+
+      <p>
+        © 2026 Huong TA
+      </p>
+
     </div>
 
-    <div class="tab-content active">
-      <div id="datas-placeholder"></div>
-    </div>
+  </footer>
 
-    <footer class="page-footer">
-      <div class="container">
-        <p>© 2025 Huong TA. All rights reserved.</p>
-      </div>
-    </footer>
+</body>
 
-    <script>
-      fetch('/pages/data_epita.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('datas-placeholder').innerHTML = data;
-        })
-        .catch(error => console.error('Error loading data_epita.html:', error));
-    </script>
-
-    <script src="/js/app.js"></script>
-  </body>
 </html>

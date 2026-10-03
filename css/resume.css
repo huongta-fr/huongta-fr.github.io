@@ -107,3 +107,47 @@ aside h6 {
   margin-left: var(--spacing-inline);
   color: #ccc;
 }
+
+/* =========================
+   Resume rows
+========================= */
+
+#resume_en-placeholder .row {
+  margin-bottom: 42px;
+  align-items: flex-start;
+}
+
+#resume_en-placeholder .title {
+  margin-top: 2px;
+
+  font-size: 16px;
+  line-height: 1.45;
+
+  color: #3f8edb;
+}
+
+#resume_en-placeholder .resume-line {
+  padding-left: 20px;
+}
+
+#resume_en-placeholder .resume-line > strong {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+#resume_en-placeholder .resume-line p {
+  margin-bottom: 14px;
+}
+
+#resume_en-placeholder .resume-line ul {
+  margin-top: 16px;
+  margin-bottom: 18px;
+}
+
+#resume_en-placeholder .resume-line li {
+  margin-bottom: 10px;
+}
